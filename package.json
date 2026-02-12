@@ -1,0 +1,19 @@
+{
+  "name": "wearfits-seo",
+  "version": "1.0.0",
+  "description": "Unified SEO landing pages for WEARFITS domain network",
+  "scripts": {
+    "dev": "echo 'Use: npx serve domains/<domain>/'",
+    "build": "echo 'Static HTML - no build needed'",
+    "deploy": "wrangler pages deploy"
+  },
+  "keywords": [
+    "seo",
+    "wearfits",
+    "ar",
+    "virtual-try-on"
+  ],
+  "author": "WEARFITS",
+  "license": "UNLICENSED",
+  "private": true
+}

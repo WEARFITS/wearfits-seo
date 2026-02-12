@@ -1,0 +1,27 @@
+# Cloudflare Pages configuration for multi-domain deployment
+
+name = "wearfits-seo"
+
+[env.production]
+compatibility_date = "2026-02-12"
+
+# Each domain routes to its directory
+[[env.production.routes]]
+pattern = "tryon-api.com/*"
+custom_domain = "tryon-api.com"
+
+[[env.production.routes]]
+pattern = "view-ar.com/*"
+custom_domain = "view-ar.com"
+
+[[env.production.routes]]
+pattern = "arfits.com/*"
+custom_domain = "arfits.com"
+
+[[env.production.routes]]
+pattern = "wearfits.me/*"
+custom_domain = "wearfits.me"
+
+[[env.production.routes]]
+pattern = "arviewer.mobi/*"
+custom_domain = "arviewer.mobi"

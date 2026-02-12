@@ -1,0 +1,102 @@
+<!-- Shared Header Component -->
+<!-- Usage: Include this in each page and customize with data attributes -->
+
+<nav class="bg-white shadow-sm sticky top-0 z-50" data-domain="">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Logo -->
+      <div class="flex">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="/" class="flex items-center" id="logo-link">
+            <span class="text-2xl font-bold" id="logo-text"><!-- Populated by JS --></span>
+          </a>
+        </div>
+        <!-- Navigation -->
+        <div class="hidden sm:ml-6 sm:flex sm:space-x-8" id="nav-links">
+          <!-- Populated by JS based on domain -->
+        </div>
+      </div>
+      <!-- CTA -->
+      <div class="hidden sm:ml-6 sm:flex sm:items-center">
+        <a href="https://wearfits.com" target="_blank" class="ml-4 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="header-cta">
+          Try WEARFITS →
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+// Dynamic header configuration based on domain
+(function() {
+  const config = {
+    'tryon-api.com': {
+      logo: '<span class="text-2xl text-indigo-600">{</span><span class="text-xl font-bold text-indigo-600">👗</span><span class="text-2xl text-indigo-600">}</span><span class="ml-2 text-xl font-bold text-indigo-600">Try-on API</span>',
+      links: [
+        { href: '/', text: 'Home' },
+        { href: '/compare', text: 'Compare' },
+        { href: '/guide', text: 'Guides' },
+        { href: '/pricing', text: 'Pricing' }
+      ],
+      cta: 'Try WEARFITS →'
+    },
+    'view-ar.com': {
+      logo: '<span class="text-2xl font-bold text-blue-600">ViewAR</span>',
+      links: [
+        { href: '/', text: 'Home' },
+        { href: '/shoes', text: 'Shoes' },
+        { href: '/bags', text: 'Bags' },
+        { href: '/rankings', text: 'Rankings' }
+      ],
+      cta: 'Try AR Viewer →'
+    },
+    'arfits.com': {
+      logo: '<span class="text-2xl font-bold text-green-600">ARFits</span>',
+      links: [
+        { href: '/', text: 'Home' },
+        { href: '/how-it-works', text: 'How It Works' },
+        { href: '/accuracy', text: 'Accuracy' },
+        { href: '/case-studies', text: 'Case Studies' }
+      ],
+      cta: 'Get Perfect Fit →'
+    },
+    'wearfits.me': {
+      logo: '<span class="text-2xl font-bold text-pink-600">WearFits.me</span>',
+      links: [
+        { href: '/', text: 'Home' },
+        { href: '/vs-traditional', text: 'Comparison' },
+        { href: '/how-it-works', text: 'How It Works' },
+        { href: '/best-tools', text: 'Best Tools' }
+      ],
+      cta: 'Try Gen-AI →'
+    },
+    'arviewer.mobi': {
+      logo: '<span class="text-2xl font-bold text-orange-600">ARViewer</span><span class="text-sm text-gray-500 ml-1">.mobi</span>',
+      links: [
+        { href: '/', text: 'Home' },
+        { href: '/webar-vs-app', text: 'WebAR vs App' },
+        { href: '/mobile-optimization', text: 'Optimization' },
+        { href: '/best-webar-tools', text: 'Tools' }
+      ],
+      cta: 'Try WebAR →'
+    }
+  };
+
+  const domain = window.location.hostname;
+  const domainConfig = config[domain] || config['tryon-api.com'];
+
+  // Set logo
+  document.getElementById('logo-text').innerHTML = domainConfig.logo;
+
+  // Set navigation links
+  const navLinks = document.getElementById('nav-links');
+  navLinks.innerHTML = domainConfig.links.map(link => `
+    <a href="${link.href}" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+      ${link.text}
+    </a>
+  `).join('');
+
+  // Set CTA
+  document.getElementById('header-cta').textContent = domainConfig.cta;
+})();
+</script>

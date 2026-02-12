@@ -1,0 +1,118 @@
+<!-- Shared Footer Component -->
+
+<footer class="bg-gray-900 text-white mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- About -->
+      <div>
+        <h3 class="text-lg font-bold mb-4" id="footer-site-name"><!-- Populated by JS --></h3>
+        <p class="text-gray-400 text-sm" id="footer-site-desc"><!-- Populated by JS --></p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-semibold mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-gray-400" id="footer-links">
+          <!-- Populated by JS -->
+        </ul>
+      </div>
+      
+      <!-- Other Domains -->
+      <div>
+        <h4 class="font-semibold mb-3">Explore More</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="https://tryon-api.com" class="hover:text-white">Try-on API</a></li>
+          <li><a href="https://view-ar.com" class="hover:text-white">ViewAR</a></li>
+          <li><a href="https://arfits.com" class="hover:text-white">ARFits</a></li>
+          <li><a href="https://wearfits.me" class="hover:text-white">WearFits.me</a></li>
+          <li><a href="https://arviewer.mobi" class="hover:text-white">ARViewer.mobi</a></li>
+        </ul>
+      </div>
+      
+      <!-- WEARFITS Brand -->
+      <div>
+        <h4 class="font-semibold mb-3">Powered by WEARFITS</h4>
+        <p class="text-sm text-gray-400 mb-3">Enterprise AR/AI virtual try-on platform</p>
+        <a href="https://wearfits.com" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-sm font-semibold">
+          Visit WEARFITS.com →
+        </a>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
+      <p>&copy; 2026 <span id="footer-copyright"><!-- Populated by JS --></span>. Part of the <a href="https://wearfits.com" class="text-indigo-400 hover:text-indigo-300">WEARFITS</a> family.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Dynamic footer configuration based on domain
+(function() {
+  const config = {
+    'tryon-api.com': {
+      name: 'Try-on API',
+      desc: 'Virtual try-on technology for developers and e-commerce platforms.',
+      links: [
+        { href: '/pricing', text: 'API Pricing' },
+        { href: '/docs', text: 'Documentation' },
+        { href: '/demo', text: 'Live Demo' }
+      ],
+      copyright: 'Try-on API'
+    },
+    'view-ar.com': {
+      name: 'ViewAR',
+      desc: 'View products in AR before you buy. See shoes, bags, and accessories in your space.',
+      links: [
+        { href: '/shoes', text: 'AR Shoes' },
+        { href: '/bags', text: 'AR Bags' },
+        { href: '/rankings', text: 'AR Rankings' }
+      ],
+      copyright: 'ViewAR'
+    },
+    'arfits.com': {
+      name: 'ARFits',
+      desc: 'AR fitting technology that gets your size right. Reduce returns, increase confidence.',
+      links: [
+        { href: '/how-it-works', text: 'How It Works' },
+        { href: '/accuracy', text: 'Accuracy Data' },
+        { href: '/case-studies', text: 'Case Studies' }
+      ],
+      copyright: 'ARFits'
+    },
+    'wearfits.me': {
+      name: 'WearFits.me',
+      desc: 'Clothes that fit ME. Powered by Gen-AI for personalized virtual try-on.',
+      links: [
+        { href: '/vs-traditional', text: 'Gen-AI vs Traditional' },
+        { href: '/how-it-works', text: 'How It Works' },
+        { href: '/best-tools', text: 'Best Tools' }
+      ],
+      copyright: 'WearFits.me'
+    },
+    'arviewer.mobi': {
+      name: 'ARViewer.mobi',
+      desc: 'Mobile AR viewer. Try products in AR right in your browser—no app download needed.',
+      links: [
+        { href: '/webar-vs-app', text: 'WebAR vs App' },
+        { href: '/mobile-optimization', text: 'Mobile Optimization' },
+        { href: '/device-compatibility', text: 'Device Compatibility' }
+      ],
+      copyright: 'ARViewer.mobi'
+    }
+  };
+
+  const domain = window.location.hostname;
+  const domainConfig = config[domain] || config['tryon-api.com'];
+
+  // Set site name and description
+  document.getElementById('footer-site-name').textContent = domainConfig.name;
+  document.getElementById('footer-site-desc').textContent = domainConfig.desc;
+  document.getElementById('footer-copyright').textContent = domainConfig.copyright;
+
+  // Set quick links
+  const footerLinks = document.getElementById('footer-links');
+  footerLinks.innerHTML = domainConfig.links.map(link => `
+    <li><a href="${link.href}" class="hover:text-white">${link.text}</a></li>
+  `).join('');
+})();
+</script>
