@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Virtual Try-On API | AR Try-On REST API 2026 | TryOn-API.com</title>
+  <meta name="title" content="Virtual Try-On API | AR Try-On REST API for Developers">
+  <meta name="description" content="Integrate AR virtual try-on into your e-commerce platform. REST API for shoes, apparel, bags. WebAR, 3D visualization, AI sizing. Easy integration, full documentation.">
+  <meta name="keywords" content="virtual try on API, AR try on API, try on REST API, virtual fitting API, AR API, WebAR API, 3D try on API, fashion API, e-commerce AR API">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tryon-api.com/">
+  <meta property="og:title" content="Virtual Try-On API | AR Try-On REST API">
+  <meta property="og:description" content="Integrate AR virtual try-on into your e-commerce platform. REST API with full documentation.">
+  <meta property="og:image" content="https://tryon-api.com/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://tryon-api.com/">
+  <meta property="twitter:title" content="Virtual Try-On API">
+  <meta property="twitter:description" content="AR try-on REST API for developers. Easy integration.">
+  <meta property="twitter:image" content="https://tryon-api.com/og-image.jpg">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tryon-api.com/">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TryOn API",
+    "url": "https://tryon-api.com",
+    "description": "Virtual try-on REST API for e-commerce platforms. AR, 3D, AI sizing.",
+    "applicationCategory": "DeveloperApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body class="bg-gray-900 font-sans text-gray-100">
+  
+  <!-- Header -->
+  <nav class="bg-gray-800 shadow-lg sticky top-0 z-50 border-b border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="/" class="text-2xl font-bold text-green-400 font-mono">TryOn-API</a>
+          </div>
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <a href="/" class="border-green-400 text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+            <a href="/docs" class="border-transparent text-gray-400 hover:border-gray-500 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Docs</a>
+            <a href="/pricing" class="border-transparent text-gray-400 hover:border-gray-500 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Pricing</a>
+          </div>
+        </div>
+        <div class="hidden sm:ml-6 sm:flex sm:items-center">
+          <a href="https://wearfits.com/demo" target="_blank" class="ml-4 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-900 bg-green-400 hover:bg-green-300">
+            Get API Key →
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="bg-gradient-to-br from-gray-900 via-gray-800 to-green-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center">
+        <div class="text-6xl mb-6">🚀</div>
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 text-white">
+          Virtual Try-On API<br>
+          <span class="text-green-400">For Developers</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          Integrate AR virtual try-on into your e-commerce platform in minutes. REST API for shoes, apparel, bags. WebAR, 3D visualization, AI sizing included.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://wearfits.com/demo" target="_blank" class="px-8 py-4 bg-green-400 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-green-300 transition text-lg">
+            Get Free API Key →
+          </a>
+          <a href="/docs" class="px-8 py-4 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition text-lg">
+            View Documentation
+          </a>
+        </div>
+        <p class="mt-4 text-sm text-gray-400">No credit card required • 1000 free API calls/month</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code Example -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-white mb-4">Quick Start in 2 Minutes</h2>
+      <p class="text-xl text-gray-400">Simple REST API — works with any language</p>
+    </div>
+    
+    <div class="bg-gray-800 rounded-lg shadow-2xl border border-gray-700">
+      <div class="bg-gray-700 px-6 py-3 rounded-t-lg border-b border-gray-600 flex items-center justify-between">
+        <span class="text-sm font-mono text-gray-300">curl</span>
+        <span class="text-xs text-green-400">200 OK</span>
+      </div>
+      <pre class="p-6 overflow-x-auto text-sm font-mono text-gray-200"><code># Initialize AR try-on session
+curl -X POST https://api.wearfits.com/v1/tryon \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "product_id": "shoe-12345",
+    "category": "shoes",
+    "user_id": "user-abc",
+    "enable_ai_sizing": true
+  }'
+
+# Response
+{
+  "session_id": "tryon_xyz789",
+  "ar_url": "https://ar.wearfits.com/tryon_xyz789",
+  "qr_code": "https://api.wearfits.com/qr/tryon_xyz789.png",
+  "expires_at": "2026-02-13T15:30:00Z"
+}</code></pre>
+    </div>
+    
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <div class="text-green-400 font-mono text-sm mb-2">Step 1</div>
+        <h3 class="text-xl font-bold text-white mb-2">Get API Key</h3>
+        <p class="text-gray-400 text-sm">Sign up for free. No credit card. 1000 calls/month included.</p>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <div class="text-green-400 font-mono text-sm mb-2">Step 2</div>
+        <h3 class="text-xl font-bold text-white mb-2">Make API Call</h3>
+        <p class="text-gray-400 text-sm">POST product ID. Get AR URL + QR code. 50ms response time.</p>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <div class="text-green-400 font-mono text-sm mb-2">Step 3</div>
+        <h3 class="text-xl font-bold text-white mb-2">Display AR</h3>
+        <p class="text-gray-400 text-sm">Show AR URL or QR code. Users try on instantly in browser.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="bg-gray-800 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">API Features</h2>
+        <p class="text-xl text-gray-400">Everything you need for virtual try-on</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-900 rounded-lg p-6 border border-gray-700">
+          <div class="text-4xl mb-3">⚡</div>
+          <h3 class="text-xl font-bold text-white mb-2">Fast Response</h3>
+          <p class="text-gray-400 text-sm">&lt;50ms API latency. Global CDN. 99.9% uptime SLA.</p>
+        </div>
+        
+        <div class="bg-gray-900 rounded-lg p-6 border border-gray-700">
+          <div class="text-4xl mb-3">🌐</div>
+          <h3 class="text-xl font-bold text-white mb-2">WebAR Included</h3>
+          <p class="text-gray-400 text-sm">No app download. Works in mobile browsers. iOS & Android.</p>
+        </div>
+        
+        <div class="bg-gray-900 rounded-lg p-6 border border-gray-700">
+          <div class="text-4xl mb-3">🎯</div>
+          <h3 class="text-xl font-bold text-white mb-2">AI Sizing</h3>
+          <p class="text-gray-400 text-sm">95% accuracy. ML-powered size recommendations.</p>
+        </div>
+        
+        <div class="bg-gray-900 rounded-lg p-6 border border-gray-700">
+          <div class="text-4xl mb-3">📦</div>
+          <h3 class="text-xl font-bold text-white mb-2">Multi-Category</h3>
+          <p class="text-gray-400 text-sm">Shoes, apparel, bags, accessories. 10K+ 3D models.</p>
+        </div>
+        
+        <div class="bg-gray-900 rounded-lg p-6 border border-gray-700">
+          <div class="text-4xl mb-3">📊</div>
+          <h3 class="text-xl font-bold text-white mb-2">Analytics</h3>
+          <p class="text-gray-400 text-sm">Track try-on events, conversions, popular products.</p>
+        </div>
+        
+        <div class="bg-gray-900 rounded-lg p-6 border border-gray-700">
+          <div class="text-4xl mb-3">🔧</div>
+          <h3 class="text-xl font-bold text-white mb-2">Easy Integration</h3>
+          <p class="text-gray-400 text-sm">REST API. Webhooks. Shopify plugin. Full docs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Endpoints -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-white mb-4">API Endpoints</h2>
+      <p class="text-xl text-gray-400">Full REST API documentation</p>
+    </div>
+    
+    <div class="space-y-4">
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-green-400 transition">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 bg-green-600 text-white text-xs font-bold rounded">POST</span>
+            <code class="text-green-400 font-mono">/v1/tryon</code>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm">Create AR try-on session for a product</p>
+      </div>
+      
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-blue-400 transition">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded">GET</span>
+            <code class="text-blue-400 font-mono">/v1/tryon/{session_id}</code>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm">Get session status and analytics</p>
+      </div>
+      
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-green-400 transition">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 bg-green-600 text-white text-xs font-bold rounded">POST</span>
+            <code class="text-green-400 font-mono">/v1/products/{id}/upload</code>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm">Upload product image, get 3D model auto-generated</p>
+      </div>
+      
+      <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-blue-400 transition">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded">GET</span>
+            <code class="text-blue-400 font-mono">/v1/analytics</code>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm">Fetch try-on analytics and conversion metrics</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SDK Support -->
+  <div class="bg-gray-800 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-white mb-4">SDK & Libraries</h2>
+        <p class="text-xl text-gray-400">Official libraries for popular languages</p>
+      </div>
+      
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-gray-900 rounded-lg p-6 border border-gray-700 text-center">
+          <div class="text-4xl mb-3">📜</div>
+          <h3 class="text-lg font-bold text-white mb-1">JavaScript</h3>
+          <code class="text-xs text-gray-400">npm install wearfits</code>
+        </div>
+        <div class="bg-gray-900 rounded-lg p-6 border border-gray-700 text-center">
+          <div class="text-4xl mb-3">🐍</div>
+          <h3 class="text-lg font-bold text-white mb-1">Python</h3>
+          <code class="text-xs text-gray-400">pip install wearfits</code>
+        </div>
+        <div class="bg-gray-900 rounded-lg p-6 border border-gray-700 text-center">
+          <div class="text-4xl mb-3">💎</div>
+          <h3 class="text-lg font-bold text-white mb-1">Ruby</h3>
+          <code class="text-xs text-gray-400">gem install wearfits</code>
+        </div>
+        <div class="bg-gray-900 rounded-lg p-6 border border-gray-700 text-center">
+          <div class="text-4xl mb-3">🐘</div>
+          <h3 class="text-lg font-bold text-white mb-1">PHP</h3>
+          <code class="text-xs text-gray-400">composer require wearfits</code>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Preview -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-white mb-4">Transparent Pricing</h2>
+      <p class="text-xl text-gray-400">Pay only for what you use</p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 rounded-lg p-8 border border-gray-700">
+        <h3 class="text-2xl font-bold text-white mb-2">Free</h3>
+        <div class="text-4xl font-bold text-green-400 mb-4">$0<span class="text-xl text-gray-400">/mo</span></div>
+        <ul class="space-y-3 text-gray-300 mb-6">
+          <li class="flex items-start gap-2"><span class="text-green-400">✓</span> 1,000 API calls/month</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">✓</span> WebAR try-on</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">✓</span> Basic analytics</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">✓</span> Community support</li>
+        </ul>
+        <a href="https://wearfits.com/demo" class="block w-full px-4 py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition text-center">
+          Get Started
+        </a>
+      </div>
+      
+      <div class="bg-gradient-to-br from-green-900 to-green-700 rounded-lg p-8 border-2 border-green-400 relative">
+        <div class="absolute top-0 right-0 bg-green-400 text-gray-900 px-3 py-1 text-xs font-bold rounded-bl-lg rounded-tr-lg">POPULAR</div>
+        <h3 class="text-2xl font-bold text-white mb-2">Pro</h3>
+        <div class="text-4xl font-bold text-white mb-4">$99<span class="text-xl text-green-200">/mo</span></div>
+        <ul class="space-y-3 text-green-100 mb-6">
+          <li class="flex items-start gap-2"><span class="text-white">✓</span> 50,000 API calls/month</li>
+          <li class="flex items-start gap-2"><span class="text-white">✓</span> AI sizing included</li>
+          <li class="flex items-start gap-2"><span class="text-white">✓</span> Advanced analytics</li>
+          <li class="flex items-start gap-2"><span class="text-white">✓</span> Priority support</li>
+          <li class="flex items-start gap-2"><span class="text-white">✓</span> Custom branding</li>
+        </ul>
+        <a href="/pricing" class="block w-full px-4 py-3 bg-white text-green-900 font-semibold rounded-lg hover:bg-gray-100 transition text-center">
+          Start Pro Trial
+        </a>
+      </div>
+      
+      <div class="bg-gray-800 rounded-lg p-8 border border-gray-700">
+        <h3 class="text-2xl font-bold text-white mb-2">Enterprise</h3>
+        <div class="text-4xl font-bold text-white mb-4">Custom</div>
+        <ul class="space-y-3 text-gray-300 mb-6">
+          <li class="flex items-start gap-2"><span class="text-green-400">✓</span> Unlimited API calls</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">✓</span> Dedicated infrastructure</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">✓</span> SLA guarantee</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">✓</span> 24/7 support</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">✓</span> Custom features</li>
+        </ul>
+        <a href="https://wearfits.com/contact" class="block w-full px-4 py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition text-center">
+          Contact Sales
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="bg-gradient-to-r from-green-600 to-blue-600 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-4">Start Building Today</h2>
+      <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+        Get your free API key. 1000 calls/month included. No credit card required.
+      </p>
+      <a href="https://wearfits.com/demo" target="_blank" class="inline-block px-8 py-4 bg-white text-green-600 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition text-lg">
+        Get Free API Key →
+      </a>
+      <p class="mt-4 text-sm text-green-200">Full documentation at <a href="https://wearfits.com/docs" class="underline">wearfits.com/docs</a></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-green-400">TryOn-API</h3>
+          <p class="text-gray-400 text-sm">Virtual try-on REST API for developers. WebAR, 3D, AI sizing.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">API</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="/docs" class="hover:text-white">Documentation</a></li>
+            <li><a href="/pricing" class="hover:text-white">Pricing</a></li>
+            <li><a href="https://wearfits.com/demo" class="hover:text-white">Get API Key</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Resources</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="https://wearfits.com/docs" class="hover:text-white">Developer Docs</a></li>
+            <li><a href="https://view-ar.com" class="hover:text-white">AR Viewer Demo</a></li>
+            <li><a href="https://github.com/wearfits" class="hover:text-white">GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Powered by WEARFITS</h4>
+          <p class="text-sm text-gray-400 mb-3">Enterprise AR/AI virtual try-on platform</p>
+          <a href="https://wearfits.com" target="_blank" class="text-green-400 hover:text-green-300 text-sm font-semibold">
+            Visit WEARFITS.com →
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
+        <p>&copy; 2026 TryOn-API. Part of the <a href="https://wearfits.com" class="text-green-400 hover:text-green-300">WEARFITS</a> family.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

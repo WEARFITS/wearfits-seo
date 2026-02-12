@@ -1,0 +1,5 @@
+# Robots.txt for tryon-api.com
+User-agent: *
+Allow: /
+
+Sitemap: https://tryon-api.com/sitemap.xml
