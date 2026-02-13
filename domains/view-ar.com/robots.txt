@@ -1,0 +1,5 @@
+# Robots.txt for view-ar.com
+User-agent: *
+Allow: /
+
+Sitemap: https://view-ar.com/sitemap.xml

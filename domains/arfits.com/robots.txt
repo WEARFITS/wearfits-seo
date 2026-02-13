@@ -1,0 +1,5 @@
+# Robots.txt for arfits.com
+User-agent: *
+Allow: /
+
+Sitemap: https://arfits.com/sitemap.xml
